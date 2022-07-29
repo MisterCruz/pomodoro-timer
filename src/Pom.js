@@ -25,6 +25,9 @@ class Pom extends Component {
                 seconds: Math.floor((timeLeft % (1000 * 60)) / 1000),
                 isStarted: true
             })
+            if (timeLeft < 0) {
+                this.setState({ isStarted: false })
+            }
         }, 1000)
     }
 
@@ -33,7 +36,10 @@ class Pom extends Component {
             <div className="bg-slate-500">
                 <h1 className="text-3xl font-bold py-10 text-white"> Pomodoro Timer </h1>
                 {this.state.isStarted ? <p className="text-3xl font-bold pt-2 pb-8 text-white"> {this.state.minutes} : {this.state.seconds}</p> : null}
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" onClick={this.countDown}>Start timer</button>
+                { this.state.isStarted ? <p className="text-2xl font-bold pt-2 pb-8 text-white">Work time 🚧 🛠 </p> : null }
+                { this.state.isStarted ? <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded">Pause Timer</button> : null}
+                {this.state.isStarted ? null : <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" 
+                onClick={this.countDown}>Start timer</button>}
             </div>
         )
     }

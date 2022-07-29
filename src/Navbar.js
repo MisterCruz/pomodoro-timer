@@ -4,7 +4,7 @@ class Navbar extends Component {
     render() {
         return (
         <nav class="flex items-center justify-between flex-wrap bg-black p-6">
-            <span class="font-semibold text-xl tracking-tight text-white">Pomodoro Timer</span>
+            <span class="font-semibold text-xl tracking-tight text-white">Pomodoro Timer  <span className="p-1"> 🍅 </span> </span>
         </nav>
         )
     }
