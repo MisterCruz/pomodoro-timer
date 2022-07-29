@@ -46,7 +46,7 @@ class Pom extends Component {
 
     render() {
         return (
-            <div className="bg-slate-500 justify-center items-center">
+            <div className="bg-slate-500 container mx-auto content-center">
                 <h1 className="text-3xl font-bold py-10 text-white"> Pomodoro Timer </h1>
                 
                 {this.state.isStarted ? 
