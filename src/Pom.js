@@ -51,7 +51,7 @@ class Pom extends Component {
                 
                 {this.state.isStarted ? 
                 <div className="content-center w-[200px] h-[200px] rounded-full border-3 flex p-3 relative bg-gray-400 justify-center items-center">
-                    <p className="text-3xl font-bold pt-2 pb-8 text-black"> {this.state.minutes} : {this.state.seconds}</p> 
+                    <p className="text-3xl font-bold pt-2 pb-3 text-black"> {this.state.minutes} : {this.state.seconds}</p> 
                 </div> 
                 : null}
                 { this.state.isStarted ? <p className="text-2xl font-bold pt-2 pb-8 text-white">Work time 🚧 🛠 </p> : null }
